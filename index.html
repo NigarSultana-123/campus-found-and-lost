@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusFind AI | Campus Lost & Found</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                CampusFind <span>AI</span>
+            </div>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#report">Report Item</a>
+                <a href="#items">Find Items</a>
+                <a href="#dashboard">Dashboard</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="tagline">SMART CAMPUS RECOVERY SYSTEM</p>
+
+            <h1>
+                Lost something?
+                <br>
+                <span>Let's find it.</span>
+            </h1>
+
+            <p>
+                CampusFind AI helps students report, search and recover
+                lost belongings across campus.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#report" class="btn primary-btn">
+                    Report an Item
+                </a>
+
+                <a href="#items" class="btn secondary-btn">
+                    Find an Item
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Dashboard -->
+    <section id="dashboard" class="dashboard-section">
+
+        <div class="section-heading">
+            <p>OVERVIEW</p>
+            <h2>Campus Recovery Dashboard</h2>
+        </div>
+
+        <div class="stats-container">
+
+            <div class="stat-card">
+                <h3 id="lostCount">0</h3>
+                <p>Lost Items</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="foundCount">0</h3>
+                <p>Found Items</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="recoveredCount">0</h3>
+                <p>Recovered</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="pendingCount">0</h3>
+                <p>Pending</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Report Item -->
+    <section id="report" class="report-section">
+
+        <div class="section-heading">
+            <p>REPORT</p>
+            <h2>Report a Lost or Found Item</h2>
+        </div>
+
+        <form id="itemForm">
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="itemType">Item Status</label>
+
+                    <select id="itemType" required>
+                        <option value="">Select status</option>
+                        <option value="Lost">Lost</option>
+                        <option value="Found">Found</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="itemName">Item Name</label>
+
+                    <input
+                        type="text"
+                        id="itemName"
+                        placeholder="Example: Black Wallet"
+                        required
+                    >
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="category">Category</label>
+
+                    <select id="category" required>
+                        <option value="">Select category</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Documents">Documents</option>
+                        <option value="Personal">Personal</option>
+                        <option value="Accessories">Accessories</option>
+                        <option value="Books">Books</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="location">Location</label>
+
+                    <select id="location" required>
+                        <option value="">Select location</option>
+                        <option value="Library">Library</option>
+                        <option value="Canteen">Canteen</option>
+                        <option value="Classroom">Classroom</option>
+                        <option value="Laboratory">Laboratory</option>
+                        <option value="Parking">Parking</option>
+                        <option value="Main Block">Main Block</option>
+                        <option value="Sports Ground">Sports Ground</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="itemDate">Date</label>
+
+                    <input
+                        type="date"
+                        id="itemDate"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="contact">Contact Information</label>
+
+                    <input
+                        type="text"
+                        id="contact"
+                        placeholder="Phone or email"
+                        required
+                    >
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="description">Description</label>
+
+                <textarea
+                    id="description"
+                    rows="4"
+                    placeholder="Describe the item..."
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <button type="submit" class="submit-btn">
+                Submit Report
+            </button>
+
+        </form>
+
+    </section>
+    <!-- Smart Match Section -->
+<section id="smartMatch" class="smart-match-section">
+
+    <div class="section-heading">
+        <p>AI POWERED</p>
+        <h2>Smart Match</h2>
+        <p class="match-intro">
+            CampusFind AI checks lost and found reports
+            to identify possible matches.
+        </p>
+    </div>
+
+    <div id="matchContainer" class="match-container">
+
+        <div class="no-match">
+            <div class="match-icon">🤖</div>
+
+            <h3>No matches yet</h3>
+
+            <p>
+                Report a lost item to let CampusFind AI
+                search for possible matches.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Smart Recovery Assistant -->
+<section id="recoveryAssistant" class="recovery-section">
+
+  <div class="section-heading">
+    <p>SMART ASSISTANT</p>
+    <h2>🧭 Smart Recovery Assistant</h2>
+    <p class="recovery-intro">
+      Get a simple recovery plan based on where your item was last seen.
+    </p>
+  </div>
+
+  <div id="recoveryContainer" class="recovery-container">
+    <div class="no-recovery">
+      <div class="recovery-icon">🧭</div>
+      <h3>No recovery plan yet</h3>
+      <p>
+        Report a lost item to generate a personalized recovery plan.
+      </p>
+    </div>
+  </div>
+
+</section>
+
+
+    <!-- Find Items -->
+    <section id="items" class="items-section">
+
+        <div class="section-heading">
+            <p>SEARCH</p>
+            <h2>Find Lost & Found Items</h2>
+        </div>
+
+
+        <div class="search-container">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search for an item..."
+            >
+
+            <select id="filterCategory">
+                <option value="All">All Categories</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Documents">Documents</option>
+                <option value="Personal">Personal</option>
+                <option value="Accessories">Accessories</option>
+                <option value="Books">Books</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <select id="filterLocation">
+                <option value="All">All Locations</option>
+                <option value="Library">Library</option>
+                <option value="Canteen">Canteen</option>
+                <option value="Classroom">Classroom</option>
+                <option value="Laboratory">Laboratory</option>
+                <option value="Parking">Parking</option>
+                <option value="Main Block">Main Block</option>
+                <option value="Sports Ground">Sports Ground</option>
+                <option value="Other">Other</option>
+            </select>
+
+        </div>
+
+
+        <div id="itemsContainer" class="items-container">
+
+            <!-- Items will appear here using JavaScript -->
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="logo">
+            CampusFind <span>AI</span>
+        </div>
+
+        <p>
+            Making campus lost & found simple, smart and connected.
+        </p>
+
+        <p class="copyright">
+            © 2026 CampusFind AI
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
